@@ -1,0 +1,101 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1988 >>
+stream
+BT
+/F1 22 Tf
+50 740 Td
+(DHANRAJ SINGH) Tj
+/F1 12 Tf
+0 -22 Td
+(Software Engineer | Distributed Systems & High-Concurrency Architecture) Tj
+/F2 10 Tf
+0 -16 Td
+(Email: dhanrajsingh.dev@gmail.com | Portfolio: Built with pure HTML/CSS | GitHub: github.com/dhanrajsingh) Tj
+
+0 -30 Td
+/F1 14 Tf
+(PROFESSIONAL SUMMARY) Tj
+0 -16 Td
+/F2 10 Tf
+(Software Engineer specializing in scalable backend architectures, distributed microservices, and high-performance) Tj
+0 -13 Td
+(systems. Proven track record in optimizing latency, tuning database performance, and building resilient APIs.) Tj
+
+0 -25 Td
+/F1 14 Tf
+(CORE TECHNICAL SKILLS) Tj
+0 -16 Td
+/F2 10 Tf
+(Languages: Python, Go, Java, TypeScript, C++, SQL) Tj
+0 -13 Td
+(Backend & Systems: Spring Boot, Node.js, FastAPI, Apache Kafka, gRPC, RESTful APIs) Tj
+0 -13 Td
+(Databases & Storage: PostgreSQL, Redis Caching, MongoDB, MySQL, Elasticsearch) Tj
+0 -13 Td
+(Cloud & DevOps: Docker, Kubernetes, AWS, CI/CD GitHub Actions, Linux) Tj
+
+0 -25 Td
+/F1 14 Tf
+(WORK EXPERIENCE) Tj
+0 -16 Td
+/F1 11 Tf
+(Software Engineer | High-Growth Tech Enterprise  (2023 - Present)) Tj
+0 -14 Td
+/F2 10 Tf
+(- Architected microservices serving 500k+ daily requests with 99.99% uptime and zero-data-loss pipelines.) Tj
+0 -13 Td
+(- Refactored database queries and implemented Redis caching, reducing P95 latency from 320ms to 45ms.) Tj
+0 -13 Td
+(- Automated Docker-based CI/CD workflows, shortening deployment cycle times by 60%.) Tj
+
+0 -20 Td
+/F1 11 Tf
+(Associate Software Engineer | Innovative Cloud Solutions  (2021 - 2023)) Tj
+0 -14 Td
+/F2 10 Tf
+(- Built resilient RESTful and gRPC microservices for enterprise cross-platform synchronization.) Tj
+0 -13 Td
+(- Achieved 88%+ automated test coverage across critical transaction endpoints.) Tj
+
+0 -25 Td
+/F1 14 Tf
+(EDUCATION) Tj
+0 -16 Td
+/F1 11 Tf
+(Bachelor of Technology in Computer Science - Honors) Tj
+0 -13 Td
+/F2 10 Tf
+(Relevant Coursework: Distributed Systems, Operating Systems, Advanced Data Structures, Networks.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000002291 00000 n 
+0000002366 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2436
+%%EOF

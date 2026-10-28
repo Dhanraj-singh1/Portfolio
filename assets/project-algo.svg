@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="bgGradAlgo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07191d"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="treeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <filter id="algoGlow">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="600" height="360" rx="16" fill="url(#bgGradAlgo)"/>
+
+  <!-- Geometric Circuit Lines -->
+  <g opacity="0.2" stroke="#2dd4bf" stroke-width="1.2">
+    <path d="M 0 80 L 120 80 L 160 120 L 250 120"/>
+    <path d="M 600 80 L 480 80 L 440 120 L 350 120"/>
+    <path d="M 0 280 L 140 280 L 180 240 L 300 240"/>
+    <path d="M 600 280 L 460 280 L 420 240 L 300 240"/>
+  </g>
+
+  <!-- Binary / Balance Tree Visualization -->
+  <g transform="translate(300, 50)">
+    <!-- Level 0 (Root) -->
+    <circle cx="0" cy="30" r="24" fill="#134e4a" stroke="#2dd4bf" stroke-width="2.5" filter="url(#algoGlow)"/>
+    <text x="0" y="35" text-anchor="middle" fill="#f0fdfa" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700">Root</text>
+
+    <!-- Connectors to Level 1 -->
+    <line x1="-15" y1="50" x2="-80" y2="105" stroke="#2dd4bf" stroke-width="2"/>
+    <line x1="15" y1="50" x2="80" y2="105" stroke="#2dd4bf" stroke-width="2"/>
+
+    <!-- Level 1 Nodes -->
+    <circle cx="-85" cy="115" r="20" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+    <text x="-85" y="120" text-anchor="middle" fill="#e0f2fe" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">L_1</text>
+
+    <circle cx="85" cy="115" r="20" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+    <text x="85" y="120" text-anchor="middle" fill="#e0f2fe" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">R_1</text>
+
+    <!-- Connectors to Level 2 -->
+    <line x1="-95" y1="133" x2="-140" y2="185" stroke="#38bdf8" stroke-width="1.8" stroke-dasharray="4 3"/>
+    <line x1="-75" y1="133" x2="-35" y2="185" stroke="#38bdf8" stroke-width="1.8"/>
+    <line x1="75" y1="133" x2="35" y2="185" stroke="#38bdf8" stroke-width="1.8"/>
+    <line x1="95" y1="133" x2="140" y2="185" stroke="#38bdf8" stroke-width="1.8" stroke-dasharray="4 3"/>
+
+    <!-- Level 2 Leaf Nodes -->
+    <circle cx="-145" cy="195" r="16" fill="#1e293b" stroke="#818cf8" stroke-width="1.5"/>
+    <text x="-145" y="199" text-anchor="middle" fill="#c7d2fe" font-family="'JetBrains Mono', monospace" font-size="9">O(1)</text>
+
+    <circle cx="-35" cy="195" r="16" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+    <text x="-35" y="199" text-anchor="middle" fill="#a7f3d0" font-family="'JetBrains Mono', monospace" font-size="9">O(logN)</text>
+
+    <circle cx="35" cy="195" r="16" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+    <text x="35" y="199" text-anchor="middle" fill="#a7f3d0" font-family="'JetBrains Mono', monospace" font-size="9">O(logN)</text>
+
+    <circle cx="145" cy="195" r="16" fill="#1e293b" stroke="#818cf8" stroke-width="1.5"/>
+    <text x="145" y="199" text-anchor="middle" fill="#c7d2fe" font-family="'JetBrains Mono', monospace" font-size="9">O(1)</text>
+  </g>
+
+  <!-- Left Side: Order Book Depth Bar Chart -->
+  <g transform="translate(30, 160)">
+    <rect width="110" height="150" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="55" y="22" text-anchor="middle" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">ORDER BOOK</text>
+    <!-- Buy bars (Green) -->
+    <rect x="15" y="35" width="40" height="8" rx="2" fill="#10b981"/>
+    <rect x="15" y="48" width="65" height="8" rx="2" fill="#10b981"/>
+    <rect x="15" y="61" width="50" height="8" rx="2" fill="#10b981"/>
+    <line x1="15" y1="76" x2="95" y2="76" stroke="#334155"/>
+    <!-- Sell bars (Red) -->
+    <rect x="15" y="85" width="55" height="8" rx="2" fill="#f43f5e"/>
+    <rect x="15" y="98" width="75" height="8" rx="2" fill="#f43f5e"/>
+    <rect x="15" y="111" width="35" height="8" rx="2" fill="#f43f5e"/>
+  </g>
+
+  <!-- Right Side: Performance Benchmark Card -->
+  <g transform="translate(460, 160)">
+    <rect width="110" height="150" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="55" y="22" text-anchor="middle" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">EXEC TIME</text>
+    <text x="55" y="60" text-anchor="middle" fill="#2dd4bf" font-family="'JetBrains Mono', monospace" font-size="18" font-weight="700">0.42μs</text>
+    <text x="55" y="78" text-anchor="middle" fill="#64748b" font-family="sans-serif" font-size="8">Sub-microsecond</text>
+    <rect x="15" y="95" width="80" height="6" rx="3" fill="#334155"/>
+    <rect x="15" y="95" width="65" height="6" rx="3" fill="#2dd4bf"/>
+    <text x="55" y="125" text-anchor="middle" fill="#a7f3d0" font-family="'JetBrains Mono', monospace" font-size="9">Zero Allocation</text>
+  </g>
+</svg>
+

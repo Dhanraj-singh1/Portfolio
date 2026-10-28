@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="bgGradGate" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#110d29"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <filter id="purpleGlow">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="600" height="360" rx="16" fill="url(#bgGradGate)"/>
+
+  <!-- Hexagonal decorative network grid -->
+  <g opacity="0.18" stroke="#a855f7" stroke-width="1.2">
+    <polygon points="120,60 150,78 150,114 120,132 90,114 90,78"/>
+    <polygon points="180,60 210,78 210,114 180,132 150,114 150,78"/>
+    <polygon points="420,60 450,78 450,114 420,132 390,114 390,78"/>
+    <polygon points="480,60 510,78 510,114 480,132 450,114 450,78"/>
+
+    <polygon points="120,240 150,258 150,294 120,312 90,294 90,258"/>
+    <polygon points="180,240 210,258 210,294 180,312 150,294 150,258"/>
+    <polygon points="420,240 450,258 450,294 420,312 390,294 390,258"/>
+    <polygon points="480,240 510,258 510,294 480,312 450,294 450,258"/>
+  </g>
+
+  <!-- Incoming Traffic Beam -->
+  <line x1="40" y1="180" x2="230" y2="180" stroke="#38bdf8" stroke-width="3" stroke-dasharray="8 6"/>
+  <circle cx="90" cy="180" r="5" fill="#38bdf8"/>
+  <circle cx="160" cy="180" r="6" fill="#38bdf8" filter="url(#purpleGlow)"/>
+
+  <!-- Central Security Gateway Shield -->
+  <g transform="translate(240, 90)">
+    <!-- Outer Shield Frame -->
+    <path d="M 60 10 L 115 35 L 115 110 C 115 155 60 180 60 180 C 60 180 5 155 5 110 L 5 35 Z" fill="#1e1b4b" stroke="url(#shieldGrad)" stroke-width="2.5" filter="url(#purpleGlow)"/>
+    
+    <!-- Inner Lock / Keyhole Icon -->
+    <rect x="42" y="85" width="36" height="30" rx="6" fill="#8b5cf6"/>
+    <path d="M 48 85 L 48 68 C 48 58 72 58 72 68 L 72 85" fill="none" stroke="#e0e7ff" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="60" cy="98" r="4" fill="#0f172a"/>
+    <line x1="60" y1="102" x2="60" y2="108" stroke="#0f172a" stroke-width="2.5"/>
+
+    <text x="60" y="145" text-anchor="middle" fill="#f472b6" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">JWT AUTH</text>
+  </g>
+
+  <!-- Routed Internal Services (Right) -->
+  <g transform="translate(420, 90)">
+    <!-- Service 1: Users Service -->
+    <rect width="130" height="42" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <circle cx="20" cy="21" r="5" fill="#38bdf8"/>
+    <text x="35" y="25" fill="#f1f5f9" font-family="'JetBrains Mono', monospace" font-size="10">/api/v1/auth</text>
+
+    <!-- Service 2: Billing Service -->
+    <rect y="65" width="130" height="42" rx="8" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+    <circle cx="20" cy="86" r="5" fill="#34d399"/>
+    <text x="35" y="90" fill="#f1f5f9" font-family="'JetBrains Mono', monospace" font-size="10">/api/v1/payments</text>
+
+    <!-- Service 3: Orders Service -->
+    <rect y="130" width="130" height="42" rx="8" fill="#1e293b" stroke="#f472b6" stroke-width="1.5"/>
+    <circle cx="20" cy="151" r="5" fill="#f472b6"/>
+    <text x="35" y="155" fill="#f1f5f9" font-family="'JetBrains Mono', monospace" font-size="10">/api/v1/orders</text>
+
+    <!-- Connector curves from Gateway to Services -->
+    <path d="M -60 90 C -20 90, -20 21, 0 21" stroke="#38bdf8" stroke-width="2" fill="none"/>
+    <path d="M -60 90 L 0 86" stroke="#34d399" stroke-width="2" fill="none"/>
+    <path d="M -60 90 C -20 90, -20 151, 0 151" stroke="#f472b6" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Bottom rate-limiting badge -->
+  <g transform="translate(40, 290)">
+    <rect width="210" height="34" rx="8" fill="#1e293b" stroke="#334155"/>
+    <circle cx="20" cy="17" r="6" fill="#10b981"/>
+    <text x="34" y="21" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="11">Rate Limiter: 10,000 req/m</text>
+  </g>
+</svg>
+
